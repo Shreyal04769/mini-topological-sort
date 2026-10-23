@@ -1,6 +1,6 @@
 [project]
 name = "mini-topological-sort"
-version = "0.1.0"
+version = "0.1.1"
 description = "Topological sort library that reports the specific cycle responsible for any ordering failure."
 requires-python = ">=3.10"
 dependencies = []
