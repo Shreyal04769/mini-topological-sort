@@ -44,3 +44,10 @@ graph keys before calling.
 - All nodes and dependency names must be strings. The type check is
   explicit and raises `TypeError` early rather than failing deep in the
   traversal.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
